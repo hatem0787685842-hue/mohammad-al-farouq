@@ -168,3 +168,98 @@ dialog::backdrop{background:#07170f99}
 <button class="btn green" id="sendOrder" style="width:100%">إرسال الطلب عبر واتساب</button>
 </div></dialog>
 <script>
+
+const products=[
+{id:'beef-local',name:'عجل بلدي',desc:'لحم عجل بلدي طازج',price:9,unit:'كيلو',cat:'beef',img:'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=900&q=80'},
+{id:'beef-imported',name:'عجل مستورد',desc:'خيار مناسب للطبخ اليومي',price:7,unit:'كيلو',cat:'beef',img:'https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?auto=format&fit=crop&w=900&q=80'},
+{id:'kofta-local',name:'كفتة عجل بلدي',desc:'مجهزة للشوي أو الطبخ',price:9,unit:'كيلو',cat:'beef',img:'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&w=900&q=80'},
+{id:'kofta-imported',name:'كفتة عجل مستورد',desc:'اختيار عملي للمشاوي',price:7,unit:'كيلو',cat:'beef',img:'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80'},
+{id:'minced-local',name:'مفاريم عجل بلدي',desc:'اختار ناعم أو خشن عند الطلب',price:9,unit:'كيلو',cat:'beef',img:'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=900&q=80'},
+{id:'burger',name:'برغر لحم',desc:'10 قطع تقريبًا لكل كيلو',price:10,unit:'كيلو',cat:'beef',img:'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80'},
+{id:'lamb-local',name:'خروف بلدي',desc:'لحم خروف بلدي',price:10,unit:'كيلو',cat:'lamb',img:'https://images.unsplash.com/photo-1603048297172-c92544798d5a?auto=format&fit=crop&w=900&q=80'},
+{id:'lamb-romanian',name:'خروف روماني',desc:'لحم خروف روماني',price:9,unit:'كيلو',cat:'lamb',img:'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80'},
+{id:'kebab',name:'كباب جاهز للشوي',desc:'كيلو كباب مجهز',price:16,unit:'كيلو',cat:'grill',img:'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80'},
+{id:'shish',name:'شيش لحم',desc:'قطع لحم مجهزة للشوي',price:20,unit:'كيلو',cat:'grill',img:'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80'},
+{id:'mixed-grill',name:'مشاوي مشكلة',desc:'تشكيلة للمشاوي',price:18,unit:'كيلو',cat:'grill',img:'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80'},
+{id:'kebab-sandwich',name:'سندويشة كباب',desc:'السعر حسب الاختيار والحجم',price:1.5,unit:'للحبة',priceLabel:'من 1 إلى 1.5 د.أ',cat:'sandwich',img:'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=900&q=80'},
+{id:'shish-sandwich',name:'سندويشة شيش',desc:'وجبة سريعة بطعم المشاوي',price:1.5,unit:'للحبة',priceLabel:'من 1 إلى 1.5 د.أ',cat:'sandwich',img:'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=900&q=80'},
+{id:'arayes',name:'عرايس',desc:'خبز محشو باللحم المتبل',price:1,unit:'للحبة',priceLabel:'من 1 إلى 1.5 د.أ',cat:'sandwich',img:'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80'},
+{id:'whole-lamb',name:'ذبيحة كاملة',desc:'السعر والتفاصيل عبر واتساب',price:0,unit:'للطلب',priceLabel:'السعر عبر واتساب',cat:'special',img:'https://images.unsplash.com/photo-1603048297172-c92544798d5a?auto=format&fit=crop&w=900&q=80'},
+{id:'aqiqah',name:'عقيقة',desc:'تواصل معنا لمعرفة الخيارات والسعر',price:0,unit:'للطلب',priceLabel:'السعر عبر واتساب',cat:'special',img:'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80'}
+];
+const fallback='https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=900&q=75';
+const cart={};
+const grid=document.getElementById('productGrid');
+const money=n=>Number(n).toFixed(n%1?1:0)+' د.أ';
+
+function renderProducts(filter='all'){
+grid.innerHTML='';
+products.filter(p=>filter==='all'||p.cat===filter).forEach(p=>{
+const card=document.createElement('article');card.className='product';
+const img=document.createElement('img');img.src=p.img;img.alt=p.name;img.loading='lazy';
+img.onerror=function(){this.onerror=null;this.src=fallback};
+const body=document.createElement('div');body.className='product-body';
+const title=document.createElement('h3');title.textContent=p.name;
+const desc=document.createElement('p');desc.textContent=p.desc;
+const bottom=document.createElement('div');bottom.className='product-bottom';
+const price=document.createElement('div');price.className='price';price.textContent=p.priceLabel||money(p.price);
+if(!p.priceLabel){const sm=document.createElement('small');sm.textContent=' / '+p.unit;price.append(sm)}
+const add=document.createElement('button');add.className='add';
+add.textContent=p.cat==='special'?'اسأل عبر واتساب':'+ أضف للسلة';
+add.onclick=()=>{
+if(p.cat==='special'){
+window.open('https://wa.me/962796073628?text='+encodeURIComponent('السلام عليكم، بدي استفسر عن '+p.name+' في ملحمة محمد الفاروق.'),'_blank');return;
+}
+cart[p.id]=(cart[p.id]||0)+1;updateCart();add.textContent='تمت الإضافة ✓';
+setTimeout(()=>add.textContent='+ أضف للسلة',900);
+};
+bottom.append(price,add);body.append(title,desc,bottom);card.append(img,body);grid.append(card);
+});
+}
+document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{
+document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));
+b.classList.add('active');renderProducts(b.dataset.filter);
+});
+function updateCart(){
+document.getElementById('cartCount').textContent=Object.values(cart).reduce((a,b)=>a+b,0);
+const box=document.getElementById('cartItems');box.innerHTML='';let total=0;
+const chosen=products.filter(p=>cart[p.id]);
+if(!chosen.length)box.innerHTML='<div class="empty">السلة فاضية حاليًا. اختار المنتجات اللي بدك إياها.</div>';
+chosen.forEach(p=>{
+const q=cart[p.id];total+=p.price*q;
+const row=document.createElement('div');row.className='cart-item';
+const label=document.createElement('div');label.textContent=p.name+' — '+money(p.price)+' / '+p.unit;
+const qty=document.createElement('div');qty.className='qty';
+const minus=document.createElement('button');minus.textContent='−';
+minus.onclick=()=>{cart[p.id]--;if(cart[p.id]<=0)delete cart[p.id];updateCart()};
+const num=document.createElement('b');num.textContent=q;
+const plus=document.createElement('button');plus.textContent='+';
+plus.onclick=()=>{cart[p.id]++;updateCart()};
+qty.append(minus,num,plus);
+const remove=document.createElement('button');remove.className='add';remove.textContent='حذف';
+remove.onclick=()=>{delete cart[p.id];updateCart()};
+row.append(label,qty,remove);box.append(row);
+});
+document.getElementById('cartTotal').textContent=money(total);
+}
+const dialog=document.getElementById('cartDialog');
+document.getElementById('openCart').onclick=()=>dialog.showModal();
+document.getElementById('closeCart').onclick=()=>dialog.close();
+document.getElementById('sendOrder').onclick=()=>{
+const chosen=products.filter(p=>cart[p.id]);
+if(!chosen.length){alert('السلة فاضية. أضف المنتجات أولًا.');return}
+const name=document.getElementById('customerName').value.trim();
+const note=document.getElementById('customerNote').value.trim();
+let msg='السلام عليكم، بدي أطلب من ملحمة محمد الفاروق:\n';
+chosen.forEach(p=>msg+='\n• '+p.name+': '+cart[p.id]+' × '+money(p.price)+' ('+p.unit+')');
+msg+='\n\nالمجموع التقديري: '+money(chosen.reduce((s,p)=>s+p.price*cart[p.id],0));
+if(name)msg+='\nالاسم: '+name;
+if(note)msg+='\nملاحظات: '+note;
+msg+='\nالرجاء تأكيد الطلب والتكلفة النهائية.';
+window.open('https://wa.me/962796073628?text='+encodeURIComponent(msg),'_blank');
+};
+document.getElementById('year').textContent=new Date().getFullYear();
+renderProducts();updateCart();
+</script>
+</body>
+</html>
