@@ -46,7 +46,7 @@
           <div class="trust-row"><span>✓ تجهيز حسب الطلب</span><span>✓ خيارات متنوعة</span><span>✓ خدمة ودودة</span></div>
         </div>
         <div class="hero-art">
-          <img class="hero-image" src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=1100&q=85" alt="قطع لحم طازجة" onerror="this.src='https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?auto=format&fit=crop&w=1100&q=80'">
+          <img class="hero-image" src="https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?auto=format&fit=crop&w=1100&q=85" alt="قطع لحم طازجة" onerror="this.src='https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?auto=format&fit=crop&w=1100&q=80'">
           <div class="seal">اختيار<br>الفاروق<br>🥩</div>
           <div class="floating-note">طازج حسب الطلب<small>نجهّز طلبكم كما تحبّون</small></div>
         </div>
@@ -56,16 +56,16 @@
       <div class="container">
         <div class="section-head"><div><span class="kicker">تسوّق بسهولة</span><h2>اختاروا ما يناسب سفرتكم</h2><p>أقسام متنوعة لتسهيل اختيار طلبكم.</p></div></div>
         <div class="categories">
-          <a class="category" href="#products" data-jump="beef"><span class="cat-icon">🥩</span><span><strong>لحوم العجل والكفتة والمفاريم</strong><small>قطع حسب الرغبة</small></span></a>
+          <a class="category" href="#products" data-jump="beef"><span class="cat-icon">🥩</span><span><strong>لحوم العجل والكفتة والمفاريم والبرغر</strong><small>قطع حسب الرغبة</small></span></a>
           <a class="category" href="#products" data-jump="lamb"><span class="cat-icon">🍖</span><span><strong>لحوم الخروف</strong><small>للطبخ والمشاوي</small></span></a>
-          <a class="category" href="#products" data-jump="sandwich"><span class="cat-icon">🥙</span><span><strong>مشاوي وسندويشات</strong><small>كباب وشيش وشقف وعرايس</small></span></a>
+          <a class="category" href="#products" data-jump="sandwich"><span class="cat-icon">🥙</span><span><strong>مشاوي وسندويشات وعرايس</strong><small>كباب وشيش وشقف وعرايس</small></span></a>
           <a class="category" href="#products" data-jump="whole"><span class="cat-icon">🐑</span><span><strong>ذبائح كاملة</strong><small>عقائق وولائم ومناسبات</small></span></a>
         </div>
       </div>
     </section>
     <section class="products-section" id="products">
       <div class="container">
-        <div class="section-head"><div><span class="kicker">من ملحمة الفاروق</span><h2>منتجاتنا وأسعارنا</h2><p>أسعار اللحوم للكيلو، وأسعار السندويشات حسب النوع. الذبائح الكاملة حسب الطلب.</p></div><div class="filters" id="filters"><button class="filter active" data-filter="all">الكل</button><button class="filter" data-filter="beef">العجل والكفتة والمفاريم</button><button class="filter" data-filter="lamb">الخروف</button><button class="filter" data-filter="sandwich">المشاوي والسندويشات</button><button class="filter" data-filter="whole">الذبائح الكاملة</button></div></div>
+        <div class="section-head"><div><span class="kicker">من ملحمة الفاروق</span><h2>منتجاتنا وأسعارنا</h2><p>أسعار اللحوم للكيلو، وأسعار السندويشات والمشاوي. الذبائح الكاملة حسب الطلب.</p></div><div class="filters" id="filters"><button class="filter active" data-filter="all">الكل</button><button class="filter" data-filter="beef">العجل والمفاريم والبرغر</button><button class="filter" data-filter="lamb">الخروف</button><button class="filter" data-filter="sandwich">المشاوي والسندويشات</button><button class="filter" data-filter="whole">الذبائح الكاملة</button></div></div>
         <div class="products" id="productsGrid"></div>
       </div>
     </section>
@@ -113,14 +113,13 @@
   <div class="modal" id="checkoutModal"><div class="modal-card"><div class="modal-head"><h3>تفاصيل توصيل الطلب</h3><button class="close-btn" id="closeModal">✕</button></div><p class="form-note">املأ التفاصيل لإرفاقها برسالة واتساب.</p><div class="field"><label for="orderName">الاسم</label><input id="orderName" placeholder="الاسم الكامل"></div><div class="field"><label for="orderPhone">رقم التواصل</label><input id="orderPhone" inputmode="tel" placeholder="07XXXXXXXX"></div><div class="field"><label for="orderAddress">المنطقة والعنوان</label><input id="orderAddress" placeholder="مثال: عمّان، المنطقة، أقرب معلم"></div><div class="field"><label for="orderNotes">ملاحظات (اختياري)</label><input id="orderNotes" placeholder="طريقة التقطيع أو موعد الاستلام"></div><button class="btn btn-primary" id="sendOrder" style="width:100%">تأكيد وإرسال عبر واتساب</button></div></div>
   <div class="toast" id="toast" role="status"></div>
   <script>
-    // عدّل رقم واتساب بصيغة دولية بدون + أو مسافات. مثال الأردن: 9627XXXXXXXX
     const CONFIG = {
       whatsappNumber: "962796073628",
       currency: "د.أ",
       shopName: "ملحمة محمد الفاروق"
     };
     const products = [
-      {id:"beef-local",name:"عجل بلدي",category:"beef",price:9,unit:"للكيلو",tag:"بلدي",desc:"عجل بلدي بسعر 9 دنانير للكيلو.",image:"https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=700&q=80"},
+      {id:"beef-local",name:"عجل بلدي",category:"beef",price:9,unit:"للكيلو",tag:"بلدي",desc:"عجل بلدي بسعر 9 دنانير للكيلو.",image:"https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?auto=format&fit=crop&w=700&q=80"},
       {id:"beef-imported",name:"عجل مستورد",category:"beef",price:7,unit:"للكيلو",tag:"مستورد",desc:"عجل مستورد بسعر 7 دنانير للكيلو.",image:"https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?auto=format&fit=crop&w=700&q=80"},
       {
         id:"kfta",name:"كفتة",category:"beef",price:null,unit:"للكيلو",tag:"حسب الطلب",
@@ -139,14 +138,18 @@
           {name:"الدرجة", choices:[{label:"خشن", price:0}, {label:"ناعم", price:0}]}
         ]
       },
-      {id:"lamb-local",name:"خاروف بلدي",category:"lamb",price:10,unit:"للكيلو",tag:"بلدي",desc:"خاروف بلدي بسعر 10 دنانير للكيلو.",image:"https://images.unsplash.com/photo-1603048297172-c92544798d5a?auto=format&fit=crop&w=700&q=80"},
-      {id:"lamb-romanian",name:"خاروف روماني",category:"lamb",price:9,unit:"للكيلو",tag:"روماني",desc:"خاروف روماني بسعر 9 دنانير للكيلو.",image:"https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?auto=format&fit=crop&w=700&q=80"},
-      {id:"kebab-sandwich",name:"سندويشة كباب",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للسندويشة",tag:"مشاوي",desc:"سندويشة كباب؛ السعر النهائي حسب الطلب والتأكيد.",image:"https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=700&q=80"},
-      {id:"shish-sandwich",name:"سندويشة شيش",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للسندويشة",tag:"مشاوي",desc:"سندويشة شيش؛ السعر النهائي حسب الطلب والتأكيد.",image:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80"},
-      {id:"shaqaf-sandwich",name:"سندويشة شقف",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للسندويشة",tag:"مشاوي",desc:"سندويشة شقف؛ السعر النهائي حسب الطلب والتأكيد.",image:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80"},
-      {id:"arayes",name:"عرايس",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للطلب",tag:"مشاوي",desc:"عرايس على الفحم؛ السعر النهائي حسب الطلب والتأكيد.",image:"https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=700&q=80"},
-      {id:"whole-lamb",name:"ذبيحة كاملة",category:"whole",price:null,priceLabel:"السعر بالتواصل",unit:"للذبيحة",tag:"ذبائح",desc:"للطلبات الكاملة والولائم؛ تواصلوا معنا لمعرفة السعر والتفاصيل.",image:"https://images.unsplash.com/photo-1603048297172-c92544798d5a?auto=format&fit=crop&w=700&q=80"},
-      {id:"aqiqah",name:"عقيقة",category:"whole",price:null,priceLabel:"السعر بالتواصل",unit:"حسب الطلب",tag:"مناسبات",desc:"طلبات العقيقة والمناسبات، مع تأكيد التفاصيل والسعر عبر واتساب.",image:"https://images.unsplash.com/photo-1603048297172-c92544798d5a?auto=format&fit=crop&w=700&q=80"}
+      {id:"burger",name:"برغر",category:"beef",price:10,unit:"للكيلو (10 قطع)",tag:"مميز",desc:"برغر لحم طازج، الكيلو بـ 10 دنانير ويحتوي على 10 قطع.",image:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80"},
+      {id:"lamb-local",name:"خاروف بلدي",category:"lamb",price:10,unit:"للكيلو",tag:"بلدي",desc:"خاروف بلدي بسعر 10 دنانير للكيلو.",image:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80"},
+      {id:"lamb-romanian",name:"خاروف روماني",category:"lamb",price:9,unit:"للكيلو",tag:"روماني",desc:"خاروف روماني بسعر 9 دنانير للكيلو.",image:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80"},
+      {id:"kebab-kg",name:"كيلو كباب",category:"sandwich",price:16,unit:"للكيلو",tag:"مشاوي",desc:"كيلو كباب طازج مشوي أو للتجهيز بسعر 16 دينار.",image:"https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=700&q=80"},
+      {id:"shaqaf-kg",name:"كيلو شقف",category:"sandwich",price:20,unit:"للكيلو",tag:"مشاوي",desc:"كيلو شقف لحم فاخر بسعر 20 دينار.",image:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80"},
+      {id:"mix-kg",name:"كيلو مشكل",category:"sandwich",price:18,unit:"للكيلو",tag:"مشاوي",desc:"كيلو مشكل مشاوي متنوعة بسعر 18 دينار.",image:"https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=700&q=80"},
+      {id:"kebab-sandwich",name:"سندويشة كباب",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للسندويشة",tag:"سندويشات",desc:"سندويشة كباب؛ السعر النهائي حسب الطلب والتأكيد.",image:"https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80"},
+      {id:"shish-sandwich",name:"سندويشة شيش",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للسندويشة",tag:"سندويشات",desc:"سندويشة شيش؛ السعر النهائي حسب الطلب والتأكيد.",image:"https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80"},
+      {id:"shaqaf-sandwich",name:"سندويشة شقف",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للسندويشة",tag:"سندويشات",desc:"سندويشة شقف؛ السعر النهائي حسب الطلب والتأكيد.",image:"https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80"},
+      {id:"arayes",name:"عرايس",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للطلب",tag:"عرايس",desc:"رغيف عرايس على الفحم؛ السعر النهائي حسب الطلب والتأكيد.",image:"https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=700&q=80"},
+      {id:"whole-lamb",name:"ذبيحة كاملة",category:"whole",price:null,priceLabel:"السعر بالتواصل",unit:"للذبيحة",tag:"ذبائح",desc:"للطلبات الكاملة والولائم؛ تواصلوا معنا لمعرفة السعر والتفاصيل.",image:"https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=700&q=80"},
+      {id:"aqiqah",name:"عقيقة",category:"whole",price:null,priceLabel:"السعر بالتواصل",unit:"حسب الطلب",tag:"مناسبات",desc:"طلبات العقيقة والمناسبات، مع تأكيد التفاصيل والسعر عبر واتساب.",image:"https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=700&q=80"}
     ];
     const cart = {};
     const $ = s => document.querySelector(s);
@@ -179,7 +182,6 @@
           </article>`;
       }).join("");
 
-      // ربط تغيرات القوائم المنسدلة بتحديث السعر المعروض فوراً إذا وُجدت خيارات أسعار
       products.forEach(p => {
         if(p.options){
           p.options.forEach((opt, optIdx) => {
@@ -209,7 +211,6 @@
       p.options.forEach((opt, optIdx) => {
         const sel = document.getElementById(`opt-${p.id}-${optIdx}`);
         if(sel){
-          parts.options = parts.options || [];
           parts.push(`${opt.name}: ${sel.value}`);
           if(optIdx === 0){
             const priceVal = parseFloat(sel.options[sel.selectedIndex].getAttribute('data-price'));
