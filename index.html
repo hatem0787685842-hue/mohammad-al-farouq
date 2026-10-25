@@ -46,7 +46,7 @@
           <div class="trust-row"><span>✓ تجهيز حسب الطلب</span><span>✓ خيارات متنوعة</span><span>✓ خدمة ودودة</span></div>
         </div>
         <div class="hero-art">
-          <img class="hero-image" src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=1100&q=80" alt="قطع لحم طازجة">
+          <img class="hero-image" src="1000245146.jpg" alt="قطع لحم طازجة" onerror="this.src='https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=1100&q=80'">
           <div class="seal">اختيار<br>الفاروق<br>🥩</div>
           <div class="floating-note">طازج حسب الطلب<small>نجهّز طلبكم كما تحبّون</small></div>
         </div>
@@ -57,7 +57,7 @@
         <div class="section-head"><div><span class="kicker">تسوّق بسهولة</span><h2>اختاروا ما يناسب سفرتكم</h2><p>أقسام متنوعة لتسهيل اختيار طلبكم.</p></div></div>
         <div class="categories">
           <a class="category" href="#products" data-jump="beef"><span class="cat-icon">🥩</span><span><strong>لحوم العجل والكفتة والمفاريم والبرغر</strong><small>قطع حسب الرغبة</small></span></a>
-          <a class="category" href="#products" data-jump="lamb"><span class="cat-icon">🍖</span><span><strong>لحوم الخروف</strong><small>للططبخ والمشاوي</small></span></a>
+          <a class="category" href="#products" data-jump="lamb"><span class="cat-icon">🍖</span><span><strong>لحوم الخروف</strong><small>للطبخ والمشاوي</small></span></a>
           <a class="category" href="#products" data-jump="sandwich"><span class="cat-icon">🥙</span><span><strong>مشاوي وسندويشات وعرايس</strong><small>كباب وشيش وشقف وعرايس</small></span></a>
           <a class="category" href="#products" data-jump="whole"><span class="cat-icon">🐑</span><span><strong>ذبائح كاملة</strong><small>عقائق وولائم ومناسبات</small></span></a>
         </div>
@@ -119,12 +119,12 @@
       shopName: "ملحمة محمد الفاروق"
     };
     const products = [
-      {id:"beef-local",name:"عجل بلدي",category:"beef",price:9,unit:"للكيلو",tag:"بلدي",desc:"عجل بلدي طازج بسعر 9 دنانير للكيلو.",image:"https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=700&q=80"},
-      {id:"beef-imported",name:"عجل مستورد",category:"beef",price:7,unit:"للكيلو",tag:"مستورد",desc:"عجل مستورد بسعر 7 دنانير للكيلو.",image:"https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?auto=format&fit=crop&w=700&q=80"},
+      {id:"beef-local",name:"عجل بلدي",category:"beef",price:9,unit:"للكيلو",tag:"بلدي",desc:"عجل بلدي طازج بسعر 9 دنانير للكيلو.",image:"1000245146.jpg"},
+      {id:"beef-imported",name:"عجل مستورد",category:"beef",price:7,unit:"للكيلو",tag:"مستورد",desc:"عجل مستورد بسعر 7 دنانير للكيلو.",image:"1000245146.jpg"},
       {
         id:"kfta",name:"كفتة",category:"beef",price:null,unit:"للكيلو",tag:"حسب الطلب",
         desc:"كفتة طازجة متوفرة بالنوعين البلدي أو المستورد.",
-        image:"https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=700&q=80",
+        image:"1000245139.jpg",
         options:[
           {name:"النوع", choices:[{label:"بلدي (9 د.أ/كغ)", price:9}, {label:"مستورد (7 د.أ/كغ)", price:7}]}
         ]
@@ -132,24 +132,24 @@
       {
         id:"minced",name:"مفاريم",category:"beef",price:null,unit:"للكيلو",tag:"حسب الطلب",
         desc:"لحم مفروم طازج حسب الطلب (بلدي أو مستورد، خشن أو ناعم).",
-        image:"https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?auto=format&fit=crop&w=700&q=80",
+        image:"1000245139.jpg",
         options:[
           {name:"النوع", choices:[{label:"بلدي (9 د.أ/كغ)", price:9}, {label:"مستورد (7 د.أ/كغ)", price:7}]},
           {name:"الدرجة", choices:[{label:"خشن", price:0}, {label:"ناعم", price:0}]}
         ]
       },
-      {id:"burger",name:"برغر لحم",category:"beef",price:10,unit:"للكيلو (10 قطع)",tag:"مميز",desc:"برغر لحم طازج، الكيلو بـ 10 دنانير ويحتوي على 10 قطع.",image:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80"},
-      {id:"lamb-local",name:"خاروف بلدي",category:"lamb",price:10,unit:"للكيلو",tag:"بلدي",desc:"خاروف بلدي طازج بسعر 10 دنانير للكيلو.",image:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80"},
-      {id:"lamb-romanian",name:"خاروف روماني",category:"lamb",price:9,unit:"للكيلو",tag:"روماني",desc:"خاروف روماني ممتاز بسعر 9 دنانير للكيلو.",image:"https://images.unsplash.com/photo-1603048297172-c92544798d5a?auto=format&fit=crop&w=700&q=80"},
-      {id:"kebab-kg",name:"كيلو كباب",category:"sandwich",price:16,unit:"للكيلو",tag:"مشاوي",desc:"كيلو كباب طازج مشوي أو للتجهيز بسعر 16 دينار.",image:"https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=700&q=80"},
-      {id:"shaqaf-kg",name:"كيلو شقف",category:"sandwich",price:20,unit:"للكيلو",tag:"مشاوي",desc:"كيلو شقف لحم فاخر بسعر 20 دينار.",image:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80"},
-      {id:"mix-kg",name:"كيلو مشكل",category:"sandwich",price:18,unit:"للكيلو",tag:"مشاوي",desc:"كيلو مشكل مشاوي متنوعة بسعر 18 دينار.",image:"https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=700&q=80"},
-      {id:"kebab-sandwich",name:"سندويشة كباب",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للسندويشة",tag:"سندويشات",desc:"سندويشة كباب شهية؛ السعر النهائي حسب الطلب والتأكيد.",image:"https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80"},
-      {id:"shish-sandwich",name:"سندويشة شيش",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للسندويشة",tag:"سندويشات",desc:"سندويشة شيش؛ السعر النهائي حسب الطلب والتأكيد.",image:"https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80"},
-      {id:"shaqaf-sandwich",name:"سندويشة شقف",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للسندويشة",tag:"سندويشات",desc:"سندويشة شقف لحم؛ السعر النهائي حسب الطلب والتأكيد.",image:"https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80"},
-      {id:"arayes",name:"رغيف عرايس",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للرغيف",tag:"عرايس",desc:"رغيف عرايس محمر على الفحم؛ السعر النهائي حسب الطلب والتأكيد.",image:"https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=700&q=80"},
-      {id:"whole-lamb",name:"ذبيحة كاملة (خاروف)",category:"whole",price:null,priceLabel:"السعر بالتواصل",unit:"للذبيحة",tag:"ذبائح",desc:"خاروف حي/مذبوح كامل للولائم؛ تواصلوا معنا لمعرفة السعر والتفاصيل.",image:"https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?auto=format&fit=crop&w=700&q=80"},
-      {id:"aqiqah",name:"عقيقة كاملة",category:"whole",price:null,priceLabel:"السعر بالتواصل",unit:"حسب الطلب",tag:"مناسبات",desc:"طلبات العقيقة والمناسبات، مع تأكيد التفاصيل والسعر عبر واتساب.",image:"https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?auto=format&fit=crop&w=700&q=80"}
+      {id:"burger",name:"برغر لحم",category:"beef",price:10,unit:"للكيلو (10 قطع)",tag:"مميز",desc:"برغر لحم طازج، الكيلو بـ 10 دنانير ويحتوي على 10 قطع.",image:"1000245139.jpg"},
+      {id:"lamb-local",name:"خاروف بلدي",category:"lamb",price:10,unit:"للكيلو",tag:"بلدي",desc:"خاروف بلدي طازج بسعر 10 دنانير للكيلو.",image:"1000245143.jpg"},
+      {id:"lamb-romanian",name:"خاروف روماني",category:"lamb",price:9,unit:"للكيلو",tag:"روماني",desc:"خاروف روماني ممتاز بسعر 9 دنانير للكيلو.",image:"1000245143.jpg"},
+      {id:"kebab-kg",name:"كيلو كباب",category:"sandwich",price:16,unit:"للكيلو",tag:"مشاوي",desc:"كيلو كباب طازج مشوي أو للتجهيز بسعر 16 دينار.",image:"1000245145.jpg"},
+      {id:"shaqaf-kg",name:"كيلو شقف",category:"sandwich",price:20,unit:"للكيلو",tag:"مشاوي",desc:"كيلو شقف لحم فاخر بسعر 20 دينار.",image:"1000245144.jpg"},
+      {id:"mix-kg",name:"كيلو مشكل",category:"sandwich",price:18,unit:"للكيلو",tag:"مشاوي",desc:"كيلو مشكل مشاوي متنوعة بسعر 18 دينار.",image:"1000245145.jpg"},
+      {id:"kebab-sandwich",name:"سندويشة كباب",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للسندويشة",tag:"سندويشات",desc:"سندويشة كباب شهية؛ السعر النهائي حسب الطلب والتأكيد.",image:"1000245140.jpg"},
+      {id:"shish-sandwich",name:"سندويشة شيش",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للسندويشة",tag:"سندويشات",desc:"سندويشة شيش؛ السعر النهائي حسب الطلب والتأكيد.",image:"1000245141.jpg"},
+      {id:"shaqaf-sandwich",name:"سندويشة شقف",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للسندويشة",tag:"سندويشات",desc:"سندويشة شقف لحم؛ السعر النهائي حسب الطلب والتأكيد.",image:"1000245140.jpg"},
+      {id:"arayes",name:"رغيف عرايس",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للرغيف",tag:"عرايس",desc:"رغيف عرايس محمر على الفحم؛ السعر النهائي حسب الطلب والتأكيد.",image:"1000245147.jpg"},
+      {id:"whole-lamb",name:"ذبيحة كاملة (خاروف)",category:"whole",price:null,priceLabel:"السعر بالتواصل",unit:"للذبيحة",tag:"ذبائح",desc:"خاروف حي/مذبوح كامل للولائم؛ تواصلوا معنا لمعرفة السعر والتفاصيل.",image:"1000245138.jpg"},
+      {id:"aqiqah",name:"عقيقة كاملة",category:"whole",price:null,priceLabel:"السعر بالتواصل",unit:"حسب الطلب",tag:"مناسبات",desc:"طلبات العقيقة والمناسبات، مع تأكيد التفاصيل والسعر عبر واتساب.",image:"1000245138.jpg"}
     ];
     const cart = {};
     const $ = s => document.querySelector(s);
