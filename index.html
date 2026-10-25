@@ -1,288 +1,170 @@
+
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#241b18">
-  <meta name="description" content="ملحمة محمد الفاروق في المقابلين، عمّان - لحوم بلدية ومستورد ومشاوي وذبائح كاملة.">
-  <title>ملحمة محمد الفاروق | لحوم ومشاوي في عمّان</title>
-  <style>
-    :root{--ink:#251b18;--ink2:#382722;--cream:#fbf6ed;--paper:#fffdf8;--red:#9e2f2b;--red2:#7c211f;--gold:#d8b777;--muted:#7b7067;--line:#eadfd1;--green:#246b45;--shadow:0 18px 45px rgba(48,30,22,.10)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.7}button,input,select{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}.container{width:min(1160px,92%);margin:auto}
-    .topline{background:var(--ink);color:#f5e8d2;font-size:13px;padding:8px 0}.topline .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    header{position:sticky;top:0;z-index:10;background:rgba(255,253,248,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:82px}.brand{display:flex;align-items:center;gap:12px;font-weight:900}.logo{width:49px;height:49px;border-radius:15px;background:linear-gradient(145deg,var(--red),var(--red2));display:grid;place-items:center;color:#fff;font-size:26px;box-shadow:0 8px 20px #9e2f2b33}.brand-name{font-size:21px;line-height:1.2}.brand small{display:block;color:var(--muted);font-size:11px;font-weight:500;margin-top:5px}.navlinks{display:flex;gap:24px;color:#5f5148;font-size:14px}.navlinks a:hover{color:var(--red)}.nav-actions{display:flex;align-items:center;gap:10px}.icon-btn,.menu-btn{border:1px solid var(--line);background:white;border-radius:13px;padding:11px 13px;cursor:pointer;position:relative}.cart-count{position:absolute;top:-7px;left:-6px;background:var(--red);color:white;border-radius:50%;width:21px;height:21px;font-size:12px;display:grid;place-items:center}.btn{border:0;display:inline-flex;justify-content:center;align-items:center;gap:9px;padding:13px 20px;border-radius:13px;font-weight:800;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--red);color:white;box-shadow:0 9px 22px #9e2f2b2a}.btn-primary:hover{background:var(--red2)}.btn-outline{background:transparent;border:1px solid #cbb9a7;color:var(--ink)}.btn-dark{background:var(--ink);color:white}.menu-btn{display:none}
-    .hero{padding:58px 0 55px;background:radial-gradient(circle at 8% 18%,#ead9bd 0,transparent 27%),linear-gradient(125deg,#f8f0e4,#fffaf2 56%,#f0dfc8);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff8ec;border:1px solid #ead9bb;color:var(--red);border-radius:999px;padding:7px 13px;font-size:13px;font-weight:800}.hero h1{font-size:clamp(36px,4.7vw,61px);line-height:1.2;margin:19px 0 16px;letter-spacing:-1.5px}.hero h1 span{color:var(--red)}.hero p{color:#706258;font-size:17px;max-width:520px;margin:0 0 25px}.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}.trust-row{display:flex;gap:24px;flex-wrap:wrap;margin-top:30px;color:#6e5e50;font-size:13px}.trust-row span{display:flex;gap:7px;align-items:center}.hero-art{position:relative;min-height:390px;display:grid;place-items:center}.hero-image{width:100%;height:390px;object-fit:cover;border-radius:30px;box-shadow:var(--shadow);border:7px solid #fffaf3}.floating-note{position:absolute;right:-16px;bottom:24px;background:white;padding:15px 18px;border-radius:17px;box-shadow:var(--shadow);font-weight:800}.floating-note small{display:block;color:var(--muted);font-weight:500}.seal{position:absolute;left:-16px;top:24px;background:var(--red);color:white;border:5px solid #fff4e3;border-radius:50%;width:100px;height:100px;display:grid;place-items:center;text-align:center;font-size:13px;font-weight:900;line-height:1.4;transform:rotate(-10deg)}
-    section{padding:72px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}.section-head h2{font-size:clamp(27px,3vw,38px);margin:7px 0 0;line-height:1.3}.section-head p{color:var(--muted);margin:8px 0 0}.kicker{color:var(--red);font-size:13px;font-weight:900;letter-spacing:.3px}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.category{background:var(--paper);border:1px solid var(--line);border-radius:19px;padding:22px;display:flex;align-items:center;gap:15px;transition:.2s}.category:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#d9b777}.cat-icon{width:54px;height:54px;display:grid;place-items:center;border-radius:16px;background:#f6e8d7;font-size:27px}.category strong{display:block}.category small{color:var(--muted)}
-    .products-section{background:#f3eade}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid #ddcbbb;background:#fffaf4;color:#6a5549;border-radius:999px;padding:9px 16px;cursor:pointer;font-size:13px;font-weight:800}.filter.active,.filter:hover{background:var(--ink);color:white;border-color:var(--ink)}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{background:var(--paper);border:1px solid #e7d9c9;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:.22s}.product:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.product-photo{height:185px;position:relative;background:#e9d8c5;overflow:hidden}.product-photo img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.product:hover .product-photo img{transform:scale(1.05)}.tag{position:absolute;top:12px;right:12px;background:#fffaf1;color:var(--red);border-radius:8px;padding:5px 9px;font-size:11px;font-weight:900}.product-body{padding:17px;display:flex;flex-direction:column;flex:1}.product h3{margin:0 0 6px;font-size:17px}.product-desc{font-size:12px;color:var(--muted);margin:0 0 13px;min-height:39px}.price-row{display:flex;align-items:baseline;gap:6px;margin-top:auto;margin-bottom:13px}.price{font-size:20px;font-weight:900;color:var(--red)}.unit{font-size:12px;color:var(--muted)}.product-actions{display:flex;gap:8px}.product-actions .btn{padding:10px 11px;flex:1;font-size:13px}.add-btn{background:#f3e5d2;color:var(--ink)}.add-btn:hover{background:#e9d4b9}
-    .options-group{margin:8px 0 12px;display:flex;flex-direction:column;gap:6px}.option-row{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:var(--ink)}.option-row select{flex:1;border:1px solid #dfd0c0;background:#fffdf9;border-radius:8px;padding:6px;outline:none;font-size:12px}
-    .promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.promise{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:27px}.promise .big-icon{font-size:28px;margin-bottom:13px}.promise h3{margin:0 0 7px}.promise p{color:var(--muted);font-size:14px;margin:0}
-    .banner{background:var(--ink);color:white;border-radius:27px;padding:38px 42px;display:flex;align-items:center;justify-content:space-between;gap:25px;overflow:hidden;position:relative}.banner:after{content:"";position:absolute;left:-50px;bottom:-120px;width:300px;height:300px;border:1px solid #d8b77755;border-radius:50%;box-shadow:0 0 0 35px #d8b7770d,0 0 0 70px #d8b7770a}.banner h2{font-size:clamp(25px,3vw,35px);margin:0 0 8px}.banner p{color:#d6c7b9;margin:0}.banner .btn{position:relative;z-index:1;white-space:nowrap}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.about-card{background:#f0e2d1;border-radius:25px;padding:35px;min-height:280px;display:flex;flex-direction:column;justify-content:center}.about-card .quote{font-size:25px;font-weight:900;line-height:1.5}.about-card small{color:var(--muted);margin-top:12px}.about-copy h2{font-size:34px;line-height:1.3;margin:10px 0}.about-copy p{color:var(--muted)}.checklist{display:grid;gap:10px;margin-top:20px}.checklist span{display:flex;gap:10px;align-items:center;font-weight:700}.check{width:22px;height:22px;background:#e0eee3;color:var(--green);border-radius:50%;display:grid;place-items:center;font-size:13px}
-    .contact{background:#f3eade}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px}.contact-card,.contact-form{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:27px}.contact-card h3,.contact-form h3{margin:0 0 18px}.contact-item{display:flex;gap:13px;margin:17px 0}.contact-icon{width:43px;height:43px;border-radius:13px;background:#f4e6d4;display:grid;place-items:center;font-size:20px;flex-shrink:0}.contact-item small{display:block;color:var(--muted)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:grid;gap:6px;margin-bottom:13px}.field label{font-size:13px;font-weight:800}.field input,.field textarea,.field select{width:100%;border:1px solid #dfd0c0;background:#fffdf9;border-radius:11px;padding:12px;outline:none}.field input:focus,.field textarea:focus{border-color:var(--red)}.field textarea{min-height:100px;resize:vertical}.form-note{font-size:12px;color:var(--muted);margin:8px 0 0}
-    footer{background:#1c1513;color:#e9dccc;padding:38px 0 20px}.footer-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:25px}.footer-brand{font-size:21px;font-weight:900}.footer-brand small{display:block;color:#a99b8e;font-size:13px;font-weight:400}.footer-links{display:flex;gap:20px;flex-wrap:wrap;color:#c7b8a8;font-size:13px}.copyright{border-top:1px solid #ffffff1c;padding-top:18px;color:#a99b8e;font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-    .overlay{position:fixed;inset:0;background:#1b100fb0;z-index:30;opacity:0;visibility:hidden;transition:.25s}.overlay.show{opacity:1;visibility:visible}.cart-drawer{position:fixed;z-index:31;top:0;left:0;height:100dvh;width:min(430px,100%);background:var(--paper);transform:translateX(-105%);transition:.28s;display:flex;flex-direction:column;box-shadow:var(--shadow)}.cart-drawer.open{transform:translateX(0)}.drawer-head{display:flex;align-items:center;justify-content:space-between;padding:22px;border-bottom:1px solid var(--line)}.drawer-head h3{margin:0}.close-btn{border:1px solid var(--line);background:white;border-radius:10px;padding:8px 12px;cursor:pointer}.cart-items{padding:15px 22px;overflow:auto;flex:1}.empty-cart{text-align:center;color:var(--muted);padding:50px 10px}.cart-item{display:grid;grid-template-columns:65px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);align-items:center}.cart-item img{width:65px;height:65px;object-fit:cover;border-radius:12px}.cart-item h4{margin:0;font-size:14px}.cart-item small{color:var(--muted)}.qty{display:flex;align-items:center;gap:9px;margin-top:7px}.qty button{width:26px;height:26px;border:1px solid var(--line);background:white;border-radius:8px;cursor:pointer}.remove{border:0;background:none;color:#a33;cursor:pointer;font-size:12px}.drawer-foot{border-top:1px solid var(--line);padding:20px 22px}.total-line{display:flex;justify-content:space-between;font-weight:900;font-size:18px;margin-bottom:14px}.drawer-foot .btn{width:100%;margin-top:8px}.modal{position:fixed;z-index:40;inset:0;display:none;place-items:center;padding:18px}.modal.show{display:grid}.modal-card{width:min(520px,100%);background:var(--paper);border-radius:22px;padding:25px;box-shadow:var(--shadow);max-height:90dvh;overflow:auto}.modal-head{display:flex;justify-content:space-between;align-items:center}.modal-head h3{margin:0}.toast{position:fixed;bottom:20px;right:50%;transform:translate(50%,120px);background:var(--ink);color:white;padding:12px 18px;border-radius:12px;z-index:60;box-shadow:var(--shadow);transition:.25s;font-size:14px}.toast.show{transform:translate(50%,0)}
-    @media(max-width:960px){.navlinks{gap:14px}.hero-grid{gap:25px}.categories{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:repeat(2,1fr)}.hero-art,.hero-image{height:340px;min-height:340px}.floating-note{right:-8px}.seal{left:-8px}.about-grid{gap:25px}}
-    @media(max-width:700px){.topline .container{justify-content:center;text-align:center}.nav{min-height:70px}.brand-name{font-size:18px}.logo{width:43px;height:43px}.navlinks{display:none;position:absolute;top:70px;right:0;left:0;background:var(--paper);border-bottom:1px solid var(--line);padding:18px 5%;flex-direction:column;gap:15px}.navlinks.show{display:flex}.menu-btn{display:inline-block}.nav-actions .btn{display:none}.hero{padding:35px 0 42px}.hero-grid{grid-template-columns:1fr;gap:30px}.hero h1{font-size:39px}.hero p{font-size:15px}.hero-art,.hero-image{height:285px;min-height:285px}.seal{width:82px;height:82px;font-size:11px;left:-4px;top:12px}.floating-note{bottom:13px;right:-3px;padding:10px 13px}.trust-row{gap:12px}.section-head{align-items:start;flex-direction:column;margin-bottom:22px}section{padding:52px 0}.categories{gap:10px}.category{padding:14px;gap:10px}.cat-icon{width:43px;height:43px;font-size:22px}.products{gap:11px}.product-photo{height:140px}.product-body{padding:13px}.product h3{font-size:15px}.product-desc{font-size:11px;min-height:48px}.price{font-size:18px}.product-actions{flex-direction:column}.product-actions .btn{padding:9px}.promise-grid{grid-template-columns:1fr}.promise{padding:21px}.banner{padding:27px 23px;align-items:flex-start;flex-direction:column}.about-grid,.contact-grid{grid-template-columns:1fr}.about-card{min-height:220px;padding:25px}.about-copy h2{font-size:29px}.form-row{grid-template-columns:1fr;gap:0}.footer-top{flex-direction:column}.copyright{flex-direction:column}.cart-drawer{width:100%}}
-    @media(max-width:380px){.products{grid-template-columns:1fr}.product-photo{height:200px}.categories{grid-template-columns:1fr}.hero h1{font-size:34px}.nav-actions{gap:6px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#183c2c">
+<meta name="description" content="ملحمة محمد الفاروق في عمّان - المقابلين، دوار الجويدة.">
+<title>ملحمة محمد الفاروق | لحوم طازجة</title>
+<style>
+:root{--g:#183c2c;--gold:#d9ad5b;--cream:#f8f5ee;--ink:#20251f;--muted:#697067;--line:#e8e2d6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.7}
+a{text-decoration:none;color:inherit}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+.wrap{width:min(1120px,92%);margin:auto}
+header{background:var(--g);color:#fff;position:sticky;top:0;z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 0}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800}
+.logo{display:grid;place-items:center;background:var(--gold);color:var(--g);width:45px;height:45px;border-radius:50%;font-size:23px}
+.brand small{display:block;color:#e4d8c1;font-size:12px;font-weight:400}
+.links{display:flex;gap:20px;font-size:14px}
+.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:10px;padding:10px 16px;font-weight:700}
+.nav-cta,.gold{background:var(--gold);color:#1c2b20}
+.green{background:var(--g);color:#fff}
+.outline{border:1px solid #ffffff80;color:#fff;background:transparent}
+.hero{background:linear-gradient(90deg,#0e251de0,#0e251d55),url('https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=1800&q=85') center/cover;min-height:460px;color:#fff;display:flex;align-items:center}
+.hero-inner{padding:60px 0;max-width:670px}
+.eyebrow{color:var(--gold);font-weight:700}
+.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.25;margin:10px 0 16px}
+.hero p{font-size:18px;color:#f4f0e7}
+.hero-actions,.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:23px}
+.chip{border:1px solid #ffffff65;border-radius:999px;padding:6px 13px;font-size:13px}
+section{padding:56px 0}
+.section-head{text-align:center;margin:0 auto 27px;max-width:650px}
+.section-head h2{font-size:clamp(25px,3vw,36px);margin:0 0 7px;color:var(--g)}
+.section-head p{color:var(--muted);margin:0}
+.filters{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-bottom:25px}
+.filter{border:1px solid var(--line);background:#fff;color:var(--g);padding:8px 15px;border-radius:999px}
+.filter.active,.filter:hover{background:var(--g);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.product{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.product img{width:100%;height:205px;object-fit:cover;background:#e9e2d6;display:block}
+.product-body{padding:16px;display:flex;flex-direction:column;flex:1}
+.product h3{margin:0 0 4px;color:var(--g);font-size:19px}
+.product p{margin:0 0 12px;color:var(--muted);font-size:14px;flex:1}
+.product-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.price{font-weight:800;color:var(--g);font-size:18px}
+.price small{font-size:12px;color:var(--muted);font-weight:400}
+.add{border:0;background:#edf2ec;color:var(--g);padding:8px 12px;border-radius:9px;font-weight:700}
+.band{background:var(--g);color:#fff}
+.band-inner{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:28px}
+.band h2{font-size:32px;line-height:1.3;margin:0 0 12px}
+.band p{color:#e4e9e3}
+.band img{width:100%;height:300px;object-fit:cover;border-radius:18px}
+.feature-list,.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.feature,.info{border:1px solid var(--line);padding:18px;border-radius:12px;background:#fff}
+.feature{border-color:#ffffff35;background:transparent}
+.feature b{display:block;color:var(--gold)}
+.info h3{margin:7px 0;color:var(--g)}
+.info p{margin:0;color:var(--muted);font-size:14px}
+.ico{font-size:27px}
+.contact{background:#eee8dc}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.contact-card{background:#fff;border-radius:16px;padding:24px;border:1px solid var(--line)}
+.contact-card h3{margin-top:0;color:var(--g)}
+.contact-row{display:flex;gap:10px;margin:12px 0}
+.contact-row span{color:var(--g);font-weight:700;min-width:90px}
+.map-placeholder{border-radius:12px;background:#e6e0d4;min-height:210px;display:grid;place-items:center;text-align:center;padding:20px;color:var(--g)}
+footer{background:#10291d;color:#e9eee8;padding:28px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:13px}
+.float-wa,.cartbar{position:fixed;bottom:18px;z-index:25;border:0;border-radius:999px;padding:12px 18px;font-weight:800}
+.float-wa{left:18px;background:#20b85a;color:#fff}
+.cartbar{right:18px;background:var(--gold);color:#1d2c20}
+.cart-count{background:var(--g);color:#fff;border-radius:999px;padding:1px 7px}
+dialog{border:0;border-radius:18px;padding:0;width:min(540px,92vw);max-height:85vh}
+dialog::backdrop{background:#07170f99}
+.modal-head{background:var(--g);color:#fff;padding:17px 22px;display:flex;justify-content:space-between;align-items:center}
+.modal-head h3{margin:0}
+.x{border:0;background:transparent;color:#fff;font-size:25px}
+.modal-body{padding:20px}
+.cart-item{display:grid;grid-template-columns:1fr auto auto;gap:9px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.qty{display:flex;align-items:center;gap:7px}
+.qty button{border:1px solid var(--line);background:#f6f3ec;border-radius:6px;width:28px;height:28px}
+.cart-total{display:flex;justify-content:space-between;font-size:19px;font-weight:800;margin:17px 0}
+.form-field{display:grid;gap:5px;margin:10px 0}
+.form-field input,.form-field textarea{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px}
+.empty{text-align:center;color:var(--muted);padding:22px}
+@media(max-width:800px){
+.links{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.band-inner,.contact-grid{grid-template-columns:1fr}
+.band img{height:230px}.feature-list,.info-grid{grid-template-columns:1fr}
+.hero{min-height:430px}
+}
+@media(max-width:520px){
+.grid{grid-template-columns:1fr}.product img{height:220px}
+.nav-cta{padding:8px 10px;font-size:13px}.hero{min-height:440px}
+.float-wa{left:10px;bottom:10px;padding:10px 13px}
+.cartbar{right:10px;bottom:10px;padding:10px 13px}.brand{font-size:14px}
+}
+</style>
 </head>
 <body>
-  <div class="topline"><div class="container"><span>🥩 ملحمة محمد الفاروق · لحوم ومشاوي وذبائح</span><span>عمّان، الأردن · نرحّب بطلباتكم</span></div></div>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#home" aria-label="ملحمة محمد الفاروق - الرئيسية"><span class="logo">ف</span><span class="brand-name">ملحمة محمد الفاروق<small>جودة تليق بجمعتكم</small></span></a>
-      <nav class="navlinks" id="navlinks"><a href="#home">الرئيسية</a><a href="#products">منتجاتنا</a><a href="#about">عن الملحمة</a><a href="#contact">تواصل معنا</a></nav>
-      <div class="nav-actions"><button class="icon-btn" id="openCart" aria-label="فتح سلة المشتريات">🛒 <span class="cart-count" id="cartCount">0</span></button><a class="btn btn-primary" href="#products">تسوّق الآن</a><button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button></div>
-    </div>
-  </header>
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">✦ من اختيارنا إلى سفرتكم</div>
-          <h1>الطعم الأصيل يبدأ من <span>الجودة</span></h1>
-          <p>في ملحمة محمد الفاروق بتلاقوا العجل البلدي والمستورد، والخاروف البلدي والروماني، ومشاوي وسندويشات، وطلبات الذبائح الكاملة للمناسبات.</p>
-          <div class="hero-buttons"><a class="btn btn-primary" href="#products">تصفّح المنتجات <span>←</span></a><a class="btn btn-outline" href="#contact">📍 معلومات الملحمة</a></div>
-          <div class="trust-row"><span>✓ تجهيز حسب الطلب</span><span>✓ خيارات متنوعة</span><span>✓ خدمة ودودة</span></div>
-        </div>
-        <div class="hero-art">
-          <img class="hero-image" src="1000245146.jpg" alt="قطع لحم طازجة" onerror="this.src='https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=1100&q=80'">
-          <div class="seal">اختيار<br>الفاروق<br>🥩</div>
-          <div class="floating-note">طازج حسب الطلب<small>نجهّز طلبكم كما تحبّون</small></div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container">
-        <div class="section-head"><div><span class="kicker">تسوّق بسهولة</span><h2>اختاروا ما يناسب سفرتكم</h2><p>أقسام متنوعة لتسهيل اختيار طلبكم.</p></div></div>
-        <div class="categories">
-          <a class="category" href="#products" data-jump="beef"><span class="cat-icon">🥩</span><span><strong>لحوم العجل والكفتة والمفاريم والبرغر</strong><small>قطع حسب الرغبة</small></span></a>
-          <a class="category" href="#products" data-jump="lamb"><span class="cat-icon">🍖</span><span><strong>لحوم الخروف</strong><small>للطبخ والمشاوي</small></span></a>
-          <a class="category" href="#products" data-jump="sandwich"><span class="cat-icon">🥙</span><span><strong>مشاوي وسندويشات وعرايس</strong><small>كباب وشيش وشقف وعرايس</small></span></a>
-          <a class="category" href="#products" data-jump="whole"><span class="cat-icon">🐑</span><span><strong>ذبائح كاملة</strong><small>عقائق وولائم ومناسبات</small></span></a>
-        </div>
-      </div>
-    </section>
-    <section class="products-section" id="products">
-      <div class="container">
-        <div class="section-head"><div><span class="kicker">من ملحمة الفاروق</span><h2>منتجاتنا وأسعارنا</h2><p>أسعار اللحوم للكيلو، وأسعار السندويشات والمشاوي. الذبائح الكاملة حسب الطلب.</p></div><div class="filters" id="filters"><button class="filter active" data-filter="all">الكل</button><button class="filter" data-filter="beef">العجل والمفاريم والبرغر</button><button class="filter" data-filter="lamb">الخروف</button><button class="filter" data-filter="sandwich">المشاوي والسندويشات</button><button class="filter" data-filter="whole">الذبائح الكاملة</button></div></div>
-        <div class="products" id="productsGrid"></div>
-      </div>
-    </section>
-    <section>
-      <div class="container">
-        <div class="section-head"><div><span class="kicker">وعد الفاروق</span><h2>خدمة تهتم بالتفاصيل</h2><p>تجربة واضحة وسهلة من اختيار المنتج حتى تجهيز الطلب.</p></div></div>
-        <div class="promise-grid">
-          <article class="promise"><div class="big-icon">🔪</div><h3>تجهيز حسب الطلب</h3><p>اختاروا طريقة التقطيع أو التجهيز التي تناسب طبختكم، وأرسلوا ملاحظاتكم عند الطلب.</p></article>
-          <article class="promise"><div class="big-icon">🥩</div><h3>خيارات تناسبكم</h3><p>أقسام متنوعة للحوم والقطع، مع إمكانية تحديث المنتجات والأسعار بسهولة.</p></article>
-          <article class="promise"><div class="big-icon">💬</div><h3>طلب مباشر وسهل</h3><p>أرسلوا قائمة مشترياتكم عبر واتساب لمراجعة التفاصيل وتأكيد الطلب مع الملحمة.</p></article>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container"><div class="banner"><div><h2>جاهزين لطلبكم القادم؟</h2><p>أضيفوا المنتجات إلى السلة وأرسلوا الطلب عبر واتساب.</p></div><button class="btn btn-primary" id="bannerCart">🛒 ابدأ طلبك الآن</button></div></div>
-    </section>
-    <section id="about">
-      <div class="container about-grid">
-        <div class="about-card"><div class="quote">«الجودة مش تفصيل صغير… هي أساس كل سفرة طيبة»</div><small>ملحمة محمد الفاروق · المقابلين، عمّان</small></div>
-        <div class="about-copy"><span class="kicker">عن ملحمة الفاروق</span><h2>قريبين منكم، وهدفنا راحتكم</h2><p>ملحمة محمد الفاروق في المقابلين، بالقرب من دوار جويعد في عمّان. نوفر خيارات من اللحوم والمشاوي، ونستقبل استفساراتكم حول الذبائح الكاملة والعقائق وتجهيز الطلبات عبر واتساب.</p><div class="checklist"><span><i class="check">✓</i> عرض المنتجات والأسعار بوضوح</span><span><i class="check">✓</i> سلة مشتريات قابلة للتعديل</span><span><i class="check">✓</i> إرسال تفاصيل الطلب إلى واتساب</span></div></div>
-      </div>
-    </section>
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="section-head"><div><span class="kicker">نحن هنا لخدمتكم</span><h2>تواصلوا مع ملحمة محمد الفاروق</h2><p>أدخلوا بياناتكم ورسالتكم وسيتم تجهيزها للإرسال عبر واتساب.</p></div></div>
-        <div class="contact-grid">
-          <div class="contact-card"><h3>معلومات التواصل</h3>
-            <div class="contact-item"><span class="contact-icon">📍</span><div><strong>الموقع</strong><small><a href="https://maps.app.goo.gl/HrXS1HKYZQmywaNw9" target="_blank" rel="noopener">عمّان، المقابلين، دوار جويعد · افتح الموقع على الخريطة</a></small></div></div>
-            <div class="contact-item"><span class="contact-icon">📱</span><div><strong>الهاتف وواتساب</strong><small id="phoneDisplay">0796073628</small></div></div>
-            <div class="contact-item"><span class="contact-icon">🕒</span><div><strong>أوقات الدوام</strong><small>من 8 صباحاً إلى 11 ليلاً</small></div></div>
-            <p class="form-note">للتأكد من توفر الأصناف والأسعار النهائية، تواصلوا معنا عبر واتساب.</p>
-          </div>
-          <form class="contact-form" id="contactForm"><h3>أرسل استفسارك</h3>
-            <div class="form-row"><div class="field"><label for="custName">الاسم</label><input id="custName" required placeholder="اسمك الكريم"></div><div class="field"><label for="custPhone">رقم الهاتف</label><input id="custPhone" inputmode="tel" placeholder="07XXXXXXXX"></div></div>
-            <div class="field"><label for="custMsg">الرسالة</label><textarea id="custMsg" required placeholder="اكتب استفسارك أو طلبك هنا..."></textarea></div>
-            <button class="btn btn-primary" type="submit">إرسال عبر واتساب ↗</button><p class="form-note">سيتم فتح واتساب برسالة جاهزة؛ لا تُرسل البيانات إلى الموقع أو تُحفظ على خادم.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer><div class="container"><div class="footer-top"><div class="footer-brand">🥩 ملحمة محمد الفاروق<small>المقابلين، دوار جويعد · عمّان، الأردن</small></div><div class="footer-links"><a href="#home">الرئيسية</a><a href="#products">المنتجات</a><a href="#about">عن الملحمة</a><a href="#contact">التواصل</a></div></div><div class="copyright"><span>© <span id="year"></span> ملحمة محمد الفاروق. جميع الحقوق محفوظة.</span><span>تصميم عربي متجاوب</span></div></div></footer>
-  <div class="overlay" id="overlay"></div>
-  <aside class="cart-drawer" id="cartDrawer" aria-label="سلة المشتريات" aria-hidden="true"><div class="drawer-head"><h3>سلة مشترياتك 🛒</h3><button class="close-btn" id="closeCart">إغلاق ✕</button></div><div class="cart-items" id="cartItems"></div><div class="drawer-foot"><div class="total-line"><span>المجموع التقديري</span><span id="cartTotal">0.00 د.أ</span></div><p class="form-note">المجموع للأصناف ذات السعر المحدد فقط؛ الأصناف المكتوب عليها «السعر بالتواصل» يتم تأكيدها عبر واتساب.</p><button class="btn btn-primary" id="checkoutWhatsApp">إرسال الطلب عبر واتساب</button><button class="btn btn-outline" id="continueShopping">متابعة التسوق</button></div></aside>
-  <div class="modal" id="checkoutModal"><div class="modal-card"><div class="modal-head"><h3>تفاصيل توصيل الطلب</h3><button class="close-btn" id="closeModal">✕</button></div><p class="form-note">املأ التفاصيل لإرفاقها برسالة واتساب.</p><div class="field"><label for="orderName">الاسم</label><input id="orderName" placeholder="الاسم الكامل"></div><div class="field"><label for="orderPhone">رقم التواصل</label><input id="orderPhone" inputmode="tel" placeholder="07XXXXXXXX"></div><div class="field"><label for="orderAddress">المنطقة والعنوان</label><input id="orderAddress" placeholder="مثال: عمّان، المنطقة، أقرب معلم"></div><div class="field"><label for="orderNotes">ملاحظات (اختياري)</label><input id="orderNotes" placeholder="طريقة التقطيع أو موعد الاستلام"></div><button class="btn btn-primary" id="sendOrder" style="width:100%">تأكيد وإرسال عبر واتساب</button></div></div>
-  <div class="toast" id="toast" role="status"></div>
-  <script>
-    const CONFIG = {
-      whatsappNumber: "962796073628",
-      currency: "د.أ",
-      shopName: "ملحمة محمد الفاروق"
-    };
-    const products = [
-      {id:"beef-local",name:"عجل بلدي",category:"beef",price:9,unit:"للكيلو",tag:"بلدي",desc:"عجل بلدي طازج بسعر 9 دنانير للكيلو.",image:"1000245146.jpg"},
-      {id:"beef-imported",name:"عجل مستورد",category:"beef",price:7,unit:"للكيلو",tag:"مستورد",desc:"عجل مستورد بسعر 7 دنانير للكيلو.",image:"1000245146.jpg"},
-      {
-        id:"kfta",name:"كفتة",category:"beef",price:null,unit:"للكيلو",tag:"حسب الطلب",
-        desc:"كفتة طازجة متوفرة بالنوعين البلدي أو المستورد.",
-        image:"1000245139.jpg",
-        options:[
-          {name:"النوع", choices:[{label:"بلدي (9 د.أ/كغ)", price:9}, {label:"مستورد (7 د.أ/كغ)", price:7}]}
-        ]
-      },
-      {
-        id:"minced",name:"مفاريم",category:"beef",price:null,unit:"للكيلو",tag:"حسب الطلب",
-        desc:"لحم مفروم طازج حسب الطلب (بلدي أو مستورد، خشن أو ناعم).",
-        image:"1000245139.jpg",
-        options:[
-          {name:"النوع", choices:[{label:"بلدي (9 د.أ/كغ)", price:9}, {label:"مستورد (7 د.أ/كغ)", price:7}]},
-          {name:"الدرجة", choices:[{label:"خشن", price:0}, {label:"ناعم", price:0}]}
-        ]
-      },
-      {id:"burger",name:"برغر لحم",category:"beef",price:10,unit:"للكيلو (10 قطع)",tag:"مميز",desc:"برغر لحم طازج، الكيلو بـ 10 دنانير ويحتوي على 10 قطع.",image:"1000245139.jpg"},
-      {id:"lamb-local",name:"خاروف بلدي",category:"lamb",price:10,unit:"للكيلو",tag:"بلدي",desc:"خاروف بلدي طازج بسعر 10 دنانير للكيلو.",image:"1000245143.jpg"},
-      {id:"lamb-romanian",name:"خاروف روماني",category:"lamb",price:9,unit:"للكيلو",tag:"روماني",desc:"خاروف روماني ممتاز بسعر 9 دنانير للكيلو.",image:"1000245143.jpg"},
-      {id:"kebab-kg",name:"كيلو كباب",category:"sandwich",price:16,unit:"للكيلو",tag:"مشاوي",desc:"كيلو كباب طازج مشوي أو للتجهيز بسعر 16 دينار.",image:"1000245145.jpg"},
-      {id:"shaqaf-kg",name:"كيلو شقف",category:"sandwich",price:20,unit:"للكيلو",tag:"مشاوي",desc:"كيلو شقف لحم فاخر بسعر 20 دينار.",image:"1000245144.jpg"},
-      {id:"mix-kg",name:"كيلو مشكل",category:"sandwich",price:18,unit:"للكيلو",tag:"مشاوي",desc:"كيلو مشكل مشاوي متنوعة بسعر 18 دينار.",image:"1000245145.jpg"},
-      {id:"kebab-sandwich",name:"سندويشة كباب",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للسندويشة",tag:"سندويشات",desc:"سندويشة كباب شهية؛ السعر النهائي حسب الطلب والتأكيد.",image:"1000245140.jpg"},
-      {id:"shish-sandwich",name:"سندويشة شيش",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للسندويشة",tag:"سندويشات",desc:"سندويشة شيش؛ السعر النهائي حسب الطلب والتأكيد.",image:"1000245141.jpg"},
-      {id:"shaqaf-sandwich",name:"سندويشة شقف",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للسندويشة",tag:"سندويشات",desc:"سندويشة شقف لحم؛ السعر النهائي حسب الطلب والتأكيد.",image:"1000245140.jpg"},
-      {id:"arayes",name:"رغيف عرايس",category:"sandwich",price:null,priceLabel:"من 1 إلى 1.5 د.أ",unit:"للرغيف",tag:"عرايس",desc:"رغيف عرايس محمر على الفحم؛ السعر النهائي حسب الطلب والتأكيد.",image:"1000245147.jpg"},
-      {id:"whole-lamb",name:"ذبيحة كاملة (خاروف)",category:"whole",price:null,priceLabel:"السعر بالتواصل",unit:"للذبيحة",tag:"ذبائح",desc:"خاروف حي/مذبوح كامل للولائم؛ تواصلوا معنا لمعرفة السعر والتفاصيل.",image:"1000245138.jpg"},
-      {id:"aqiqah",name:"عقيقة كاملة",category:"whole",price:null,priceLabel:"السعر بالتواصل",unit:"حسب الطلب",tag:"مناسبات",desc:"طلبات العقيقة والمناسبات، مع تأكيد التفاصيل والسعر عبر واتساب.",image:"1000245138.jpg"}
-    ];
-    const cart = {};
-    const $ = s => document.querySelector(s);
-    const money = n => (typeof n === "number" ? `${n.toFixed(2)} ${CONFIG.currency}` : "حسب الطلب");
-    const safeText = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-    function toast(message){const t=$("#toast");t.textContent=message;t.classList.add("show");clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove("show"),2600)}
-    function renderProducts(filter="all"){
-      $("#productsGrid").innerHTML=products.filter(p=>filter==="all"||p.category===filter).map(p=>{
-        let optionsHtml = '';
-        if(p.options){
-          optionsHtml = `<div class="options-group">` + p.options.map((opt, optIdx) => `
-            <div class="option-row">
-              <span>${opt.name}:</span>
-              <select id="opt-${p.id}-${optIdx}">
-                ${opt.choices.map((c, cIdx) => `<option value="${c.label}" data-price="${c.price}">${c.label}</option>`).join('')}
-              </select>
-            </div>
-          `).join('') + `</div>`;
-        }
-        return `
-          <article class="product">
-            <div class="product-photo"><img loading="lazy" src="${p.image}" alt="${safeText(p.name)}" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#d9c0a4,#f1e5d5)';this.parentElement.insertAdjacentHTML('beforeend','<div style=&quot;display:grid;place-items:center;height:100%;font-size:54px&quot;>🥩</div>')"><span class="tag">${safeText(p.tag)}</span></div>
-            <div class="product-body">
-              <h3>${safeText(p.name)}</h3>
-              <p class="product-desc">${safeText(p.desc)}</p>
-              ${optionsHtml}
-              <div class="price-row"><span class="price" id="price-${p.id}">${safeText(p.priceLabel||money(p.price))}</span><span class="unit">${safeText(p.unit)}</span></div>
-              <div class="product-actions"><button class="btn add-btn" onclick="addToCartWithOptions('${p.id}')">＋ أضف للسلة</button><button class="btn btn-outline" onclick="quickWhatsAppWithOptions('${p.id}')">اطلب مباشرة</button></div>
-            </div>
-          </article>`;
-      }).join("");
-
-      products.forEach(p => {
-        if(p.options){
-          p.options.forEach((opt, optIdx) => {
-            const sel = document.getElementById(`opt-${p.id}-${optIdx}`);
-            if(sel){
-              sel.addEventListener('change', () => {
-                const opt0Sel = document.getElementById(`opt-${p.id}-0`);
-                if(opt0Sel){
-                  const selectedOpt = opt0Sel.options[opt0Sel.selectedIndex];
-                  const priceVal = parseFloat(selectedOpt.getAttribute('data-price'));
-                  const priceEl = document.getElementById(`price-${p.id}`);
-                  if(priceEl && !isNaN(priceVal)){
-                    priceEl.textContent = money(priceVal);
-                  }
-                }
-              });
-            }
-          });
-        }
-      });
-    }
-
-    function getSelectedOptions(p){
-      if(!p.options) return {desc:"", price: p.price};
-      let parts = [];
-      let finalPrice = p.price;
-      p.options.forEach((opt, optIdx) => {
-        const sel = document.getElementById(`opt-${p.id}-${optIdx}`);
-        if(sel){
-          parts.push(`${opt.name}: ${sel.value}`);
-          if(optIdx === 0){
-            const priceVal = parseFloat(sel.options[sel.selectedIndex].getAttribute('data-price'));
-            if(!isNaN(priceVal)) finalPrice = priceVal;
-          }
-        }
-      });
-      return {desc: parts.join("، "), price: finalPrice};
-    }
-
-    function addToCartWithOptions(id){
-      const p = products.find(x=>x.id===id);
-      const selData = getSelectedOptions(p);
-      const cartKey = p.options ? `${id}_${selData.desc}` : id;
-      cart[cartKey] = cart[cartKey] || {id: id, name: p.name, unit: p.unit, image: p.image, optionsDesc: selData.desc, price: selData.price, priceLabel: p.priceLabel, qty: 0};
-      cart[cartKey].qty += 1;
-      renderCart();
-      toast("تمت إضافة المنتج إلى السلة");
-    }
-
-    function changeQtyKey(key,delta){
-      if(cart[key]){
-        cart[key].qty += delta;
-        if(cart[key].qty <= 0) delete cart[key];
-        renderCart();
-      }
-    }
-    function removeItemKey(key){delete cart[key];renderCart()}
-    function cartCount(){return Object.values(cart).reduce((a,b)=>a+b.qty,0)}
-    function cartTotal(){return Object.values(cart).reduce((sum,item)=>sum+(typeof item.price === "number" ? item.price*item.qty : 0),0)}
-    
-    function renderCart(){
-      $("#cartCount").textContent=cartCount();$("#cartTotal").textContent=money(cartTotal());
-      const keys=Object.keys(cart);
-      $("#cartItems").innerHTML=keys.length?keys.map(k=>{
-        const item=cart[k];
-        return `<div class="cart-item"><img src="${item.image}" alt="${safeText(item.name)}" onerror="this.style.visibility='hidden'"><div><h4>${safeText(item.name)} ${item.optionsDesc ? `(${safeText(item.optionsDesc)})` : ''}</h4><small>${safeText(item.priceLabel||money(item.price))} · ${safeText(item.unit)}</small><div class="qty"><button onclick="changeQtyKey('${k}',-1)" aria-label="تقليل الكمية">−</button><strong>${item.qty}</strong><button onclick="changeQtyKey('${k}',1)" aria-label="زيادة الكمية">+</button></div></div><button class="remove" onclick="removeItemKey('${k}')">حذف</button></div>`;
-      }).join(""):`<div class="empty-cart"><div style="font-size:42px">🛒</div><strong>السلة لسه فاضية</strong><p>أضف المنتجات اللي بدك إياها وراح تظهر هون.</p></div>`;
-      $("#checkoutWhatsApp").disabled=!keys.length;$("#checkoutWhatsApp").style.opacity=keys.length?1:.55;
-    }
-
-    function openCart(){ $("#overlay").classList.add("show");$("#cartDrawer").classList.add("open");$("#cartDrawer").setAttribute("aria-hidden","false");document.body.style.overflow="hidden"}
-    function closeCart(){ $("#overlay").classList.remove("show");$("#cartDrawer").classList.remove("open");$("#cartDrawer").setAttribute("aria-hidden","true");document.body.style.overflow=""}
-    function waReady(){return /^9627\d{8}$/.test(CONFIG.whatsappNumber)}
-    function sendWhatsApp(message){if(!waReady()){toast("عدّل رقم واتساب الملحمة داخل CONFIG أولاً");return}window.open("https://wa.me/"+CONFIG.whatsappNumber+"?text="+encodeURIComponent(message),"_blank","noopener")}
-    
-    function quickWhatsAppWithOptions(id){
-      const p=products.find(x=>x.id===id);
-      const selData = getSelectedOptions(p);
-      sendWhatsApp(`السلام عليكم، بدي أستفسر/أطلب من ${CONFIG.shopName}:\n- ${p.name} ${selData.desc ? `(${selData.desc})` : ''}\nالسعر: ${p.priceLabel||money(selData.price)} ${p.unit}\nيرجى تأكيد السعر والتوفر.`);
-    }
-
-    function startCheckout(){if(!cartCount()){toast("أضف منتجًا واحدًا على الأقل أولاً");return}closeCart();$("#checkoutModal").classList.add("show")}
-    
-    function sendCartOrder(){
-      if(!cartCount()){toast("السلة فارغة");return}
-      const name=$("#orderName").value.trim(),phone=$("#orderPhone").value.trim(),address=$("#orderAddress").value.trim(),notes=$("#orderNotes").value.trim();
-      if(!name||!phone||!address){toast("يرجى تعبئة الاسم ورقم التواصل والعنوان");return}
-      const lines=Object.values(cart).map(item=>`- ${item.name} ${item.optionsDesc ? `(${item.optionsDesc})` : ''}: الكمية ${item.qty} (${item.unit}) — ${typeof item.price === "number" ? `${money(item.price)} للوحدة، الإجمالي ${money(item.price*item.qty)}` : (item.priceLabel||"السعر بالتواصل")}`);
-      const msg=`السلام عليكم، بدي أطلب من ${CONFIG.shopName}:\n\n${lines.join("\n")}\n\nالمجموع التقديري للأصناف ذات السعر المحدد: ${money(cartTotal())}\nالاسم: ${name}\nرقم التواصل: ${phone}\nالعنوان: ${address}\nملاحظات: ${notes||"لا يوجد"}\n\nيرجى تأكيد التوفر والسعر النهائي وموعد الاستلام/التوصيل.`;
-      sendWhatsApp(msg);
-    }
-
-    $("#filters").addEventListener("click",e=>{const b=e.target.closest("[data-filter]");if(!b)return;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));renderProducts(b.dataset.filter)});
-    document.querySelectorAll("[data-jump]").forEach(a=>a.addEventListener("click",()=>{const f=a.dataset.jump;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x.dataset.filter===f));renderProducts(f)}));
-    $("#openCart").addEventListener("click",openCart);$("#closeCart").addEventListener("click",closeCart);$("#overlay").addEventListener("click",closeCart);$("#continueShopping").addEventListener("click",closeCart);$("#checkoutWhatsApp").addEventListener("click",startCheckout);$("#bannerCart").addEventListener("click",()=>{openCart()});
-    $("#closeModal").addEventListener("click",()=>$("#checkoutModal").classList.remove("show"));$("#checkoutModal").addEventListener("click",e=>{if(e.target.id==="checkoutModal")$("#checkoutModal").classList.remove("show")});$("#sendOrder").addEventListener("click",sendCartOrder);
-    $("#contactForm").addEventListener("submit",e=>{e.preventDefault();const name=$("#custName").value.trim(),phone=$("#custPhone").value.trim(),msg=$("#custMsg").value.trim();sendWhatsApp(`السلام عليكم، استفسار من موقع ${CONFIG.shopName}\nالاسم: ${name}\nرقم الهاتف: ${phone||"غير مذكور"}\nالرسالة: ${msg}`)});
-    $("#menuBtn").addEventListener("click",()=>$("#navlinks").classList.toggle("show"));document.querySelectorAll("#navlinks a").forEach(a=>a.addEventListener("click",()=>$("#navlinks").classList.remove("show")));
-    $("#year").textContent=new Date().getFullYear();
-    if(waReady()){$("#phoneDisplay").textContent="0796073628"; $("#phoneDisplay").innerHTML="<a href=\"https://wa.me/"+CONFIG.whatsappNumber+"\" target=\"_blank\" rel=\"noopener\">0796073628 · اضغط للمراسلة</a>";}
-    renderProducts();renderCart();
-  </script>
-</body>
-</html>
+<header>
+<div class="wrap nav">
+<a class="brand" href="#home"><span class="logo">م</span><span>ملحمة محمد الفاروق<small>لحوم طازجة • جودة وثقة</small></span></a>
+<nav class="links"><a href="#products">المنتجات</a><a href="#grill">المشاوي</a><a href="#about">ليش إحنا؟</a><a href="#contact">اتصل بنا</a></nav>
+<a class="nav-cta" href="https://wa.me/962796073628" target="_blank">اطلب عبر واتساب</a>
+</div>
+</header>
+<main id="home">
+<section class="hero"><div class="wrap hero-inner">
+<div class="eyebrow">من ملحمتنا إلى سفرتكم</div>
+<h1>الطعم الأصيل يبدأ<br>من اللحم الطازج</h1>
+<p>اختار طلبك من اللحوم البلدية والمستوردة والمشاوي، وابعتلنا طلبك مباشرة على واتساب بكل سهولة.</p>
+<div class="hero-actions"><a class="btn gold" href="#products">تصفّح المنتجات</a><a class="btn outline" href="https://wa.me/962796073628" target="_blank">تواصل معنا</a></div>
+<div class="chips"><span class="chip">🥩 خيارات متعددة</span><span class="chip">📍 المقابلين - دوار الجويدة</span><span class="chip">🕗 يوميًا 8 صباحًا – 11 مساءً</span></div>
+</div></section>
+<section id="products"><div class="wrap">
+<div class="section-head"><h2>اختار من منتجاتنا</h2><p>أسعار واضحة، وخيارات تناسب طبختك. أضف المنتجات للسلة وأرسل طلبك عبر واتساب.</p></div>
+<div class="filters">
+<button class="filter active" data-filter="all">الكل</button>
+<button class="filter" data-filter="beef">لحوم العجل</button>
+<button class="filter" data-filter="lamb">لحوم الخروف</button>
+<button class="filter" data-filter="grill">المشاوي</button>
+<button class="filter" data-filter="sandwich">السندويشات</button>
+<button class="filter" data-filter="special">الذبائح والعقائق</button>
+</div>
+<div class="grid" id="productGrid"></div>
+</div></section>
+<section class="band" id="grill"><div class="wrap band-inner"><div>
+<div class="eyebrow">لجمعة الأهل والأصحاب</div><h2>مشاوي طازجة<br>على كيفك</h2>
+<p>كباب، شيش طاووق، شيش لحم، وعرايس. جهّز طلبك واحكيلنا شو بتحب، وبنساعدك تختار الكمية المناسبة.</p>
+<a class="btn gold" href="#products">شوف المشاوي والسندويشات</a>
+<div class="feature-list"><div class="feature"><b>كباب</b><span>طازج ومجهز للشوي</span></div><div class="feature"><b>شيش لحم</b><span>قطع مرتبة للشواية</span></div><div class="feature"><b>عرايس</b><span>اختيار طيب للجمعة</span></div></div>
+</div>
+<img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=85" alt="مشاوي مشكلة على الشواية" loading="lazy">
+</div></section>
+<section id="about"><div class="wrap">
+<div class="section-head"><h2>ليش تختار ملحمة محمد الفاروق؟</h2><p>نهتم بجودة المنتج وسهولة الطلب والتواصل مع الزبون.</p></div>
+<div class="info-grid">
+<div class="info"><div class="ico">🥩</div><h3>خيارات متنوعة</h3><p>عجل بلدي ومستورد، خروف بلدي وروماني، ومستلزمات المشاوي.</p></div>
+<div class="info"><div class="ico">💬</div><h3>طلب سريع</h3><p>أرسل طلبك على واتساب وحدد الكمية، وبنتواصل معك لتأكيد التفاصيل.</p></div>
+<div class="info"><div class="ico">📍</div><h3>موقع واضح</h3><p>عمّان، المقابلين، دوار الجويدة. افتح الخريطة للوصول إلينا.</p></div>
+</div></div></section>
+<section class="contact" id="contact"><div class="wrap">
+<div class="section-head"><h2>تواصل معنا</h2><p>للطلبات والاستفسار عن الذبائح الكاملة والعقائق، تواصل معنا مباشرة.</p></div>
+<div class="contact-grid"><div class="contact-card"><h3>ملحمة محمد الفاروق</h3>
+<div class="contact-row"><span>📍 العنوان</span><div>عمّان، المقابلين، دوار الجويدة</div></div>
+<div class="contact-row"><span>📞 الهاتف</span><div><a href="tel:0796073628">0796073628</a></div></div>
+<div class="contact-row"><span>🕒 الدوام</span><div>يوميًا من 8 صباحًا حتى 11 مساءً</div></div>
+<a class="btn green" href="https://wa.me/962796073628" target="_blank">افتح واتساب</a>
+<a class="btn" style="background:#f1eee6;color:var(--g)" href="https://maps.app.goo.gl/HrXS1HKYZQmywaNw9" target="_blank">افتح الموقع على الخريطة</a>
+</div>
+<div class="map-placeholder"><div><div style="font-size:38px">📍</div><b>المقابلين - دوار الجويدة</b><p>اضغط على زر الخريطة لفتح الموقع في Google Maps.</p></div></div>
+</div></div></section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> ملحمة محمد الفاروق</span><span>عمّان - المقابلين - دوار الجويدة</span><span>للطلب: 0796073628</span></div></footer>
+<button class="cartbar" id="openCart">🛒 سلة الطلب <span class="cart-count" id="cartCount">0</span></button>
+<a class="float-wa" href="https://wa.me/962796073628" target="_blank">واتساب ✆</a>
+<dialog id="cartDialog">
+<div class="modal-head"><h3>سلة الطلب</h3><button class="x" id="closeCart">×</button></div>
+<div class="modal-body"><div id="cartItems"></div><div class="cart-total"><span>المجموع التقديري</span><span id="cartTotal">0 د.أ</span></div>
+<div class="form-field"><label for="customerName">الاسم (اختياري)</label><input id="customerName" placeholder="اسمك"></div>
+<div class="form-field"><label for="customerNote">ملاحظات الطلب (اختياري)</label><textarea id="customerNote" rows="2" placeholder="مثلاً: اللحم مفروم ناعم، أو موعد الاستلام"></textarea></div>
+<button class="btn green" id="sendOrder" style="width:100%">إرسال الطلب عبر واتساب</button>
+</div></dialog>
+<script>
